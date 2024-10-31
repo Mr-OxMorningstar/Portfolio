@@ -108,14 +108,9 @@ const Home = () => {
             </div>
             <div className="body">
                 <div className="bodyleft">
-                    <h1 className="neon">Hi there!👋</h1>
-                    <h3 className="text2">I'm a developer passionate about turning ideas into reality!</h3>
-                    <p className="intro-text">
-                        Welcome to my portfolio! I’m a Full-Stack Developer specializing in high-performance web and mobile applications, as well as data-driven systems with intuitive interfaces. I thrive on solving complex challenges and am always eager to learn new technologies to build efficient, scalable solutions.
-                    </p>
-                    <p className="intro-text" style={{marginLeft:'20%', background:'#DC5F00'}}>
-                        Welcome to my portfolio! I’m a Full-Stack Developer specializing in high-performance web and mobile applications, as well as data-driven systems with intuitive interfaces. I thrive on solving complex challenges and am always eager to learn new technologies to build efficient, scalable solutions.
-                    </p>
+                    <p className="fullstack">Full-Stack Developer</p>
+                    <p className="myname">AN<br/>Hlungwane</p>
+                    <p className="fullstack" style={{fontSize:'16px', textAlign:'left',width:'60%', marginTop:'7%' }}>"Hello and welcome to my portfolio! I'm a Full-Stack Developer with a passion for building high-performance web and mobile applications, as well as data-driven systems with seamless, user-friendly interfaces. I excel at tackling complex challenges and am always driven to learn the latest technologies to deliver efficient, scalable, and impactful solutions."</p>
                 </div>
                 <div className="bodyright">
                     <img src={Me} alt="My Profile" className="profile-img" />
