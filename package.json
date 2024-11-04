@@ -13,10 +13,12 @@
     "cjs": "^0.0.11",
     "dist": "^0.1.2",
     "react": "^18.3.1",
+    "react-awesome-shapes": "^0.1.12",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "sass": "^1.80.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",
