@@ -122,14 +122,15 @@
             }
 
             .myname {
-                font-size: 150px;
+                font-size: 130px;
                 display: flex;
                 text-align: left;
-                color: wheat; // Red color
+                color: wheat;
                 font-weight: 700;
                 margin: 0 0 2% 0;
-                line-height: 0.9;
-                // text-shadow: 0 2px 5px rgba(255, 0, 0, 0.5); // Red shadow
+                line-height: 1.1;
+                text-shadow: -2px 0px 5px orange;
+
             }
         }
 

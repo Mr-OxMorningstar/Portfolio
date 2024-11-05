@@ -1,74 +1,106 @@
 .profile-container {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
     background: #000000;
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    overflow: hidden;
 
     .profile-body-left {
-        width: 70%;
+        width: 75%;
         padding: 2rem;
         color: #eaeaea;
         animation: slideIn 1s ease-out;
         border-radius: 15px;
-        background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
+        background: linear-gradient(50deg, #000000c9, #191919 100%);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
         overflow: scroll;
         overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
 
         .name {
-            font-size: 48px;
+            font-size: 60px;
             font-weight: 700;
-            background: linear-gradient(90deg, #ff8c3f, #ffa500);
+            color: wheat;
+            background: linear-gradient(90deg, #ffa500, wheat);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            transition: color 0.3s ease;
+            transition: color 0.5s ease;
             margin-bottom: 1rem;
+            margin: 0;
         }
 
         .summary {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.6;
             color: #d0d0d0;
             margin-bottom: 2rem;
+            text-align: left;
+            width: 77%;
+            box-shadow: -7px 10px 9px #000000;
+            border-radius: 15px;
+            padding: 1%;
         }
 
         .experience-section {
+            width: 80%;
+
             .section-title {
                 font-size: 24px;
                 font-weight: 600;
-                color: #ffa500;
                 margin-bottom: 1rem;
+                width: 30%;
+                margin-left: 35%;
+                box-shadow: -2px 3px 3px black;
+                border-radius: 15px;
+                background: linear-gradient(90deg, #ffa500, rgba(245, 222, 179, 0.674));
             }
 
             .experience {
                 margin-bottom: 2rem;
-                padding-left: 1rem;
-                border-left: 4px solid #ff8c3f;
+                padding: 1% 2%;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                text-align: left;
+                border-radius: 15px;
+                box-shadow: -10px 12px 9px #000000;
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
 
                 &:hover {
                     transform: translateX(5px);
-                    box-shadow: 2px 2px 8px rgba(255, 140, 63, 0.3);
+                    box-shadow: inset -10px 12px 9px #f9fbe730;
+                    transition: transform 0.4s ease;
                 }
 
                 .experience-date {
                     font-size: 14px;
-                    color: #b0b0b0;
+                    color: wheat;
                 }
 
                 .experience-company {
                     font-size: 18px;
                     font-weight: 500;
-                    color: #eaeaea;
+                    color: wheat;
                 }
 
                 .experience-role {
                     font-size: 16px;
                     font-weight: 600;
-                    color: #ff8c3f;
+                    color: #ffa500;
                 }
 
                 .experience-details {
@@ -76,7 +108,7 @@
                     padding-left: 1.5rem;
                     list-style-type: disc;
                     color: #d0d0d0;
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 1.5;
 
                     li {
@@ -84,9 +116,24 @@
                         transition: color 0.3s ease;
 
                         &:hover {
-                            color: #ff8c3f;
+                            color: orange;
                         }
                     }
+                }
+
+                .complogo {
+                    background-color: #00000000;
+                    height: 270px;
+                    aspect-ratio: 1 / 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin-right: 10%;
+                    //border-style:solid ;
+                    border-color: rgba(245, 222, 179, 0.662);
+                    position: relative;
+                    overflow: hidden;
                 }
             }
         }
@@ -127,10 +174,22 @@
     from {
         opacity: 0;
         transform: translateX(-20px);
+        border-bottom-left-radius: 100%;
+        border-top-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        border-top-right-radius: 100%;
+        width: 20%;
+
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius: 0%;
+        width: 80%;
     }
 }
 
@@ -139,6 +198,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

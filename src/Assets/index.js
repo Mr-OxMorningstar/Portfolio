@@ -7,7 +7,8 @@ import sportlight from './icons/spotlight.png';
 import bulb from './icons/bulb.png';
 import wheat from './images/wheat.png';
 import wheat4 from './images/wheat4.PNG';
-
+import AionsLogo from './images/Aion.webp'; 
+import yesYouth from  './images/yes4youth.png';
 export {
     DoubleRing,
     Me,
@@ -17,5 +18,7 @@ export {
     sportlight, 
     bulb,
     wheat,
-    wheat4
+    wheat4,
+    AionsLogo,
+    yesYouth
 }

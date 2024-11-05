@@ -1,0 +1,23 @@
+.homelight, .homelight_text{
+    top: 98%;
+    position: absolute;
+    width: 207px;
+    height: 300px;
+    border-top: 110vh solid rgba(255, 255, 200, 0.2);
+    border-left: 8vw solid transparent;
+    border-right: 25vw solid transparent;
+    transform: rotate(181deg);
+    transform-origin: top;
+    filter: blur(20px);
+    transition: transform 0.3s ease;
+    left: 55%;
+}
+.profile_text{
+    display: block;
+    rotate: -93deg;
+    left: 37%;
+    top: 59%;
+    border-top: 76vh solid rgba(255, 255, 200, 0.2);
+    border-left: 7vw solid transparent;
+    border-right: 7vw solid transparent;
+}
