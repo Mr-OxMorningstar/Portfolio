@@ -12,10 +12,12 @@
     "@testing-library/user-event": "^13.5.0",
     "cjs": "^0.0.11",
     "dist": "^0.1.2",
+    "framer-motion": "^11.11.11",
     "react": "^18.3.1",
     "react-awesome-shapes": "^0.1.12",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.7.4",
     "sass": "^1.80.4",
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28"

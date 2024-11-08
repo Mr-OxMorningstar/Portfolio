@@ -15,7 +15,7 @@
         color: #eaeaea;
         animation: slideIn 1s ease-out;
         border-radius: 15px;
-        background: linear-gradient(50deg, #000000c9, #191919 100%);
+        background: linear-gradient(217deg, rgba(36, 36, 36, 0.79), #191919 100%);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
         overflow: scroll;
         overflow-x: hidden;
@@ -122,18 +122,18 @@
                 }
 
                 .complogo {
-                    background-color: #00000000;
+                    background-color: rgba(0, 0, 0, 0);
                     height: 270px;
                     aspect-ratio: 1 / 1;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 50%;
-                    margin-right: 10%;
-                    //border-style:solid ;
-                    border-color: rgba(245, 222, 179, 0.662);
+                    margin-right: 2%;
                     position: relative;
                     overflow: hidden;
+                    .img{
+                        width: 15%;
+                    }
                 }
             }
         }

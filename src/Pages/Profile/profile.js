@@ -1,6 +1,6 @@
 import React from "react";
 import './style.scss';
-import { AionsLogo, wheat, wheat4, yesYouth } from '../../Assets';
+import { AionsLogo, yesYouth, java, js, flutter, dart, python, react, nextjs, jupyter, mongo, css, html, sass } from '../../Assets';
 import { SportLight } from '../../components';
 
 const Profile = () => {
@@ -50,59 +50,71 @@ const Profile = () => {
                                 <li>Collaborated on stages of the systems development lifecycle from briefing to staging releases.</li>
                             </ul>
                         </div>
-                        <div className="complogo"  >
+                        <div className="complogo" style={{ width: '40%' }}  >
                             <img src={yesYouth} style={{ height: '35%', cursor: 'pointer' }} />
                             <img src={AionsLogo} style={{ height: '20%', cursor: 'pointer' }} />
                             <a style={{ height: '100%', width: '100%', position: 'absolute' }} target="_blank" href="https://www.yes4youth.co.za/" />
                         </div>
                     </div>
+
                     <br />
                     <p className="section-title">Skills</p>
-                    <div className="experience" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <div>
-                            {/* <p className="experience-date">2023/12 - Present</p> */}
+                    <div className="experience" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', height: '300px' }}>
+                        <div style={{ width: '20%' }}>
                             <p className="experience-company">Technologies</p>
-                            <p className="experience-role"> {'>'}React</p>
-                            <p className="experience-role"> {'>'}Next</p>
-                            <p className="experience-role"> {'>'}Flutter</p>
-                            <p className="experience-role"> {'>'}jupyter</p>
-                            {/* <ul className="experience-details">
-                                <li>Built databases and table structures for web applications.</li>
-                                <li>Wrote scripts to help minimize time taken to do admin work.</li>
-                                <li>Inspected code, assessed functionality, and optimized performance.</li>
-                                <li>Corrected, modified, and upgraded software to improve performance.</li>
-                                <li>Developed web applications for desktop and mobile operating systems.</li>
-                                <li>Documented software development methodologies in technical manuals.</li>
-                            </ul> */}
+                            <ul className="experience-details">
+                                <li>React.js</li>
+                                <li>Next.js</li>
+                                <li>Jupyter</li>
+                                <li>Flutter</li>
+                                <li>MongoDB</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SASS/SCSS</li>
+                            </ul>
+
                         </div>
 
-                        <div className="complogo" >
-                            <img src={AionsLogo} style={{ height: '30%', cursor: 'pointer' }} />
-                            <a href='https://www.aions.co.za' target='_blank' style={{ height: '100%', width: '100%', position: 'absolute' }} />
+                        <div className="complogo" style={{ width: '80%', height: '90%', display: 'flex', flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'space-around' }}  >
+                            <img className='img' src={react} />
+                            <img className='img' src={flutter} />
+                            <img className='img' src={nextjs} />
+                            <img className='img' src={jupyter} />
+                            <img className='img' src={mongo} />
+                            <img className='img' src={html} />
+                            <img className='img' src={css} />
+                            <img className='img' src={sass} />
                         </div>
                     </div>
-                    <div className="experience" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <div>
-                            {/* <p className="experience-date">2023/12 - Present</p> */}
+                    <div className="experience" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', height: '200px' }}>
+                        <div style={{ width: '20%', height: '100%' }} >
                             <p className="experience-company">Languages</p>
-                            <p className="experience-role"> {'>'}React</p>
-                            <p className="experience-role"> {'>'}Next</p>
-                            <p className="experience-role"> {'>'}Flutter</p>
-                            <p className="experience-role"> {'>'}jupyter</p>
-                            {/* <ul className="experience-details">
-                                <li>Built databases and table structures for web applications.</li>
-                                <li>Wrote scripts to help minimize time taken to do admin work.</li>
-                                <li>Inspected code, assessed functionality, and optimized performance.</li>
-                                <li>Corrected, modified, and upgraded software to improve performance.</li>
-                                <li>Developed web applications for desktop and mobile operating systems.</li>
-                                <li>Documented software development methodologies in technical manuals.</li>
-                            </ul> */}
+                            <ul className="experience-details">
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                                <li>Dart</li>
+                                <li>Java</li>
+                            </ul>
                         </div>
 
-                        <div className="complogo" >
-                            <img src={AionsLogo} style={{ height: '30%', cursor: 'pointer' }} />
-                            <a href='https://www.aions.co.za' target='_blank' style={{ height: '100%', width: '100%', position: 'absolute' }} />
+                        <div className="complogo" style={{ width: '80%', height: '80%', display: 'flex', flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'space-around' }}  >
+                            <img className='img' src={js} />
+                            <img className='img' src={dart} />
+                            <img className='img' src={python} />
+                            <img className='img' src={java} />
                         </div>
+                    </div>
+
+                    <br />
+                    <p className="section-title">Cetificates</p>
+                    <div className="experience" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', height: '300px' }}>
+                        <p className="experience-role">Component under construction!</p>
+                    </div>
+
+                    <br />
+                    <p className="section-title">Education</p>
+                    <div className="experience" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', height: '300px' }}>
+                        <p className="experience-role">Component under construction!</p>
                     </div>
                 </div>
             </div>
