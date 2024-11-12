@@ -1,7 +1,7 @@
 .profile-container {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 90%;
     background: #000000;
     padding: 2rem;
     border-radius: 20px;
@@ -60,9 +60,8 @@
                 margin-bottom: 1rem;
                 width: 30%;
                 margin-left: 35%;
-                box-shadow: -2px 3px 3px black;
+                box-shadow: 0px 3px 0px #ffa500;
                 border-radius: 15px;
-                background: linear-gradient(90deg, #ffa500, rgba(245, 222, 179, 0.674));
             }
 
             .experience {
@@ -131,8 +130,18 @@
                     margin-right: 2%;
                     position: relative;
                     overflow: hidden;
-                    .img{
+
+                    .img {
                         width: 15%;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        cursor: pointer;
+                       // background-color: red;
+
+                        &:hover {
+                            transform: scale(1.1);
+                           // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+                            background-color: transparent;
+                        }
                     }
                 }
             }
@@ -173,22 +182,22 @@
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateX(-20px);
-        border-bottom-left-radius: 100%;
-        border-top-left-radius: 100%;
-        border-bottom-right-radius: 100%;
-        border-top-right-radius: 100%;
-        width: 20%;
+        // transform: translateX(-20px);
+        // border-bottom-left-radius: 100%;
+        // border-top-left-radius: 100%;
+        // border-bottom-right-radius: 100%;
+        // border-top-right-radius: 100%;
+        width: 80%;
 
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
-        border-bottom-left-radius: 0%;
-        border-top-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-        border-top-right-radius: 0%;
+        // transform: translateX(0);
+        // border-bottom-left-radius: 0%;
+        // border-top-left-radius: 0%;
+        // border-bottom-right-radius: 0%;
+        // border-top-right-radius: 0%;
         width: 80%;
     }
 }

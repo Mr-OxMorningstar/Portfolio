@@ -35,7 +35,7 @@ const Home = () => {
             </div>
 
             {SelectedPage === 'Home' ? 
-                <animated.div className="body" style={pageFade}>
+                <div className="body" style={pageFade}>
                     <div className="bodyleft">
                         <p className="fullstack">Full-Stack Developer</p>
                         <p className="myname">Agreement<br style={{ margin: '0' }} />Hlungwane</p>
@@ -52,7 +52,7 @@ const Home = () => {
                         <SportLight />
                     </div>
 
-                </animated.div> 
+                </div> 
                 : SelectedPage === 'Profile' ? <Profile /> : null}
         </div>
     );

@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.5% 1%;
+    padding: 0% 1%;
     align-items: center;
     position: relative;
     overflow-x: hidden;
 
     .topbar {
-        height: 8%;
+        height: 10%;
         width: 20%;
         transition: width 0.7s ease;
         border-radius: 50px;
@@ -35,7 +35,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border-radius: 30px;
+                border-radius: 50px;
                 transition: all 0.3s ease;
                 border-style: solid;
                 border-color: transparent;
@@ -79,8 +79,8 @@
         height: 90%;
         width: 100%;
         display: flex;
-        opacity: 0;
-        animation: fadeInPage 2s forwards; // Fade in effect for the whole body
+        opacity: 1;
+       // animation: fadeInPage 2s forwards; // Fade in effect for the whole body
 
         .bodyleft,
         .bodyright {
@@ -110,8 +110,7 @@
                 font-weight: 700;
                 margin: 0 0 2% 0;
                 line-height: 1.1;
-                text-shadow: -2px 0px 5px orange;
-                animation: bounceIn 1.5s ease;
+                animation: slideIn 1.5s ease-out;
             }
         }
 
@@ -148,7 +147,10 @@
         0% { transform: translateX(-100%); }
         100% { transform: translateX(0); }
     }
-
+    @keyframes slideIn{
+        0% {opacity: 0; }
+        100% {opacity: 1; }
+    }
     @keyframes bounceIn {
         0% { transform: scale(0.5); }
         50% { transform: scale(1.1); }
