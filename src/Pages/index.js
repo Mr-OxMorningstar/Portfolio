@@ -42,7 +42,7 @@ const Home = () => {
                         <p className="fullstack" style={{ fontSize: 'larger', textAlign: 'left', width: '80%', marginTop: '7%', lineHeight: '1.3' }}>
                             Hello and welcome to my portfolio! I'm a Full-Stack Developer with a passion for building high-performance web and
                             mobile applications, as well as data-driven systems with seamless, user-friendly interfaces. I excel at tackling
-                            complex challenges and am always driven to learn the latest technologies to deliver efficient, scalable, and impactful
+                            complex challenges and I'm always driven to learn the latest technologies to deliver efficient, scalable, and impactful
                             solutions.
                         </p>
                     </div>
