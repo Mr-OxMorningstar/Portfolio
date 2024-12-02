@@ -1,0 +1,24 @@
+.WeEatcontainer{
+    background-color: palegreen;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .try{
+        width: 20%;
+        height: 30%;
+        transform: rotateY(-5deg) rotateX(-30deg);
+        background-color: red;
+        perspective-origin: 100px;
+        transform-style: preserve-3d;
+        position: relative;
+        transition: 1s;
+        scale: 0.8;
+
+        &:hover{
+            transform: rotateX(150deg) rotateY(-20deg);
+            scale: 3;
+        }
+    }
+}

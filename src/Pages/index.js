@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring"; // Importing react-spring for animation
 import './style.scss';
 import Profile from "./Profile/profile";
+import Projects from "./Projects/Projects";
+import PlayGround from "./PlayGround/PlayGroung";
 import { Me, homeIcon, profile, ufo, sportlight, bulb } from '../Assets';
 import { SportLight } from '../components';
 
@@ -9,6 +11,7 @@ const Home = () => {
     const [isMouseIn, setIsMouseIn] = useState(false);
     const [isMouseDown, setIsMouseDown] = useState(false);
     const [SelectedPage, setSelectedPage] = useState('Profile');
+    const [SelectedProject, setSelectedProject] = useState('');
 
     // Animation for page content fade-in
     const pageFade = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 300 });
@@ -21,20 +24,31 @@ const Home = () => {
     const handleOnMouseDown = () => setIsMouseDown(true);
     const handleOnMouseUp = () => setIsMouseDown(false);
 
+    function processProjectPlayGround(e) {
+        setSelectedPage('ProjectPlayGround');
+        setSelectedProject(e)
+    };
+    function closePLayGround() {
+        console.log('closing')
+        setSelectedPage('Projects');
+    };
     return (
         <div className="home">
-            <div className="topbar" onMouseEnter={togglebarEnter} onMouseLeave={togglebarLeave}>
-                <div className="icontray">
-                    {["Home", "Profile", "Projects", "Contact"].map((item, index) => (
-                        <div onClick={e => { setSelectedPage(e.currentTarget.id); }} key={index} id={item} className={isMouseIn ? 'homepairActive' : 'homepair'} style={{ backgroundColor: SelectedPage === item ? '#f4dfc840' : '', boxShadow: SelectedPage === item ? ' inset -11px 8px 15px -4px #F4DFC8' : '' }} onMouseDown={handleOnMouseDown} onMouseUp={handleOnMouseUp}>
-                            <img alt={item.toLowerCase()} src={index % 2 === 0 ? homeIcon : profile} />
-                            {isMouseIn ? <p className="iconname">{item}</p> : null}
-                        </div>
-                    ))}
+            {SelectedPage === 'ProjectPlayGround' ? null :
+                <div className="topbar" onMouseEnter={togglebarEnter} onMouseLeave={togglebarLeave}>
+                    <div className="icontray">
+                        {["Home", "Profile", "Projects", "Contact"].map((item, index) => (
+                            <div onClick={e => { setSelectedPage(e.currentTarget.id); }} key={index} id={item} className={isMouseIn ? 'homepairActive' : 'homepair'} style={{ backgroundColor: SelectedPage === item ? '#f4dfc840' : '', boxShadow: SelectedPage === item ? ' inset -11px 8px 15px -4px #F4DFC8' : '' }} onMouseDown={handleOnMouseDown} onMouseUp={handleOnMouseUp}>
+                                <img alt={item.toLowerCase()} src={index % 2 === 0 ? homeIcon : profile} />
+                                {isMouseIn ? <p className="iconname">{item}</p> : null}
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            }
 
-            {SelectedPage === 'Home' ? 
+            {console.log(SelectedPage)}
+            {SelectedPage === 'Home' ?
                 <div className="body" style={pageFade}>
                     <div className="bodyleft">
                         <p className="fullstack">Full-Stack Developer</p>
@@ -52,8 +66,10 @@ const Home = () => {
                         <SportLight />
                     </div>
 
-                </div> 
-                : SelectedPage === 'Profile' ? <Profile /> : null}
+                </div>
+                : SelectedPage === 'Profile' ? <Profile />
+                    : SelectedPage === 'Projects' ? <Projects getProject={processProjectPlayGround} />
+                        : SelectedPage === 'ProjectPlayGround' ? <PlayGround close={closePLayGround} selectedProject={SelectedProject} /> : null}
         </div>
     );
 };

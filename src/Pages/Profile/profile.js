@@ -35,14 +35,14 @@ const Profile = () => {
                         </div>
 
                         <div className="complogo" style={{ width: '80%', height: '90%', display: 'flex', flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'space-around' }} >
-                            <img className='img' alt='react' src={react} onClick={() => window.open('https://react.dev/', '_blank')} />
-                            <img className='img' alt='flutter' src={flutter} onClick={() => window.open('https://flutter.dev/', '_blank')} />
-                            <img className='img' alt='next' src={nextjs} onClick={() => window.open('https://nextjs.org/', '_blank')} />
-                            <img className='img' alt='jupyter' src={jupyter} onClick={() => window.open('https://jupyter.org/', '_blank')} />
-                            <img className='img' alt='mongo' src={mongo} onClick={() => window.open('https://www.mongodb.com/', '_blank')} />
-                            <img className='img' alt='hmtl' src={html} onClick={() => window.open('https://html.com/', '_blank')} />
-                            <img className='img' alt='css' src={css} onClick={() => window.open('https://www.w3schools.com/css/', '_blank')} />
-                            <img className='img' alt='scss' src={sass} onClick={() => window.open('https://sass-lang.com/', '_blank')} />
+                            <img className='react' alt='react' src={react} onClick={() => window.open('https://react.dev/', '_blank')} />
+                            <img className='flutter' alt='flutter' src={flutter} onClick={() => window.open('https://flutter.dev/', '_blank')} />
+                            <img className='next' alt='next' src={nextjs} onClick={() => window.open('https://nextjs.org/', '_blank')} />
+                            <img className='jupyter' alt='jupyter' src={jupyter} onClick={() => window.open('https://jupyter.org/', '_blank')} />
+                            <img className='mongo' alt='mongo' src={mongo} onClick={() => window.open('https://www.mongodb.com/', '_blank')} />
+                            <img className='html' alt='hmtl' src={html} onClick={() => window.open('https://html.com/', '_blank')} />
+                            <img className='css' alt='css' src={css} onClick={() => window.open('https://www.w3schools.com/css/', '_blank')} />
+                            <img className='scss' alt='scss' src={sass} onClick={() => window.open('https://sass-lang.com/', '_blank')} />
                         </div>
 
                     </div>
@@ -57,11 +57,11 @@ const Profile = () => {
                             </ul>
                         </div>
 
-                        <div className="complogo" style={{ width: '80%', height: '80%', display: 'flex', flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'space-around' }}  >
-                            <img className='img' alt='js' src={js} onClick={() => window.open('https://devdocs.io/javascript/', '_blank')} />
-                            <img className='img' alt='dart' src={dart} onClick={() => window.open('https://dart.dev/', '_blank')} />
-                            <img className='img' alt='pythin' src={python} onClick={() => window.open('https://www.python.org/', '_blank')} />
-                            <img className='img' alt='java' src={java} onClick={() => window.open('https://www.java.com/en/', '_blank')} />
+                        <div className="complogo" style={{ width: '80%', height: '75%', display: 'flex', flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'space-around' }}  >
+                            <img className='js' alt='js' src={js} onClick={() => window.open('https://devdocs.io/javascript/', '_blank')} />
+                            <img className='dart' alt='dart' src={dart} onClick={() => window.open('https://dart.dev/', '_blank')} />
+                            <img className='python' alt='python' src={python} onClick={() => window.open('https://www.python.org/', '_blank')} />
+                            <img className='java' alt='java' src={java} onClick={() => window.open('https://www.java.com/en/', '_blank')} />
 
                         </div>
                     </div>
