@@ -1,0 +1,17 @@
+.projectcontainer{
+    background-color: red;
+    width: 98%;
+    height: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+
+    .projectcard{
+        background-color: green;
+        width: 20%;
+        height: 30%
+    }
+}
