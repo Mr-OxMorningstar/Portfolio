@@ -1,7 +1,6 @@
 import React, { } from "react";
 import './style.scss';
 import { AionsLogo, yesYouth, java, js, flutter, dart, python, react, nextjs, jupyter, mongo, css, html, sass } from '../../Assets';
-import { SportLight, PreviewSkills } from '../../components';
 const Profile = () => {
     return (
         <div className="profile-container">
@@ -85,8 +84,8 @@ const Profile = () => {
                         </div>
 
                         <div className="complogo" >
-                            <img src={AionsLogo} style={{ height: '30%', cursor: 'pointer' }} />
-                            <a href='https://www.aions.co.za' target='_blank' style={{ height: '100%', width: '100%', position: 'absolute' }} />
+                            <img src={AionsLogo} alt="Aions Creative Technology Logo" style={{ height: '30%', cursor: 'pointer' }} />
+                            <a href='https://www.aions.co.za' target='_blank' rel="noopener noreferrer" style={{ height: '100%', width: '100%', position: 'absolute' }} />
                         </div>
                     </div>
                     <div className="experience">
@@ -102,9 +101,9 @@ const Profile = () => {
                             </ul>
                         </div>
                         <div className="complogo" style={{ width: '40%' }}  >
-                            <img src={yesYouth} style={{ height: '35%', cursor: 'pointer' }} />
-                            <img src={AionsLogo} style={{ height: '20%', cursor: 'pointer' }} />
-                            <a style={{ height: '100%', width: '100%', position: 'absolute' }} target="_blank" href="https://www.yes4youth.co.za/" />
+                            <img src={yesYouth} alt="Yes4Youth Logo" style={{ height: '35%', cursor: 'pointer' }} />
+                            <img src={AionsLogo} alt="Aions Creative Technology Logo" style={{ height: '20%', cursor: 'pointer' }} />
+                            <a style={{ height: '100%', width: '100%', position: 'absolute' }} target="_blank" rel="noopener noreferrer" href="https://www.yes4youth.co.za/" />
                         </div>
                     </div>
 
