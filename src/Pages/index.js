@@ -60,6 +60,25 @@ const Home = () => {
                         <div className="bodyright">
                             <div className="profile-container">
                                 <img src={Me} alt="Agreement Hlungwane" className="profile-img" />
+                                
+                                {/* Holographic Alien Effects */}
+                                <div className="holographic-container">
+                                    <div className="alien-glow"></div>
+                                    <div className="holographic-overlay"></div>
+                                    
+                                    <div className="alien-beam beam-1"></div>
+                                    <div className="alien-beam beam-2"></div>
+                                    <div className="alien-beam beam-3"></div>
+                                    
+                                    <div className="mystical-particles">
+                                        <div className="particle"></div>
+                                        <div className="particle"></div>
+                                        <div className="particle"></div>
+                                        <div className="particle"></div>
+                                        <div className="particle"></div>
+                                    </div>
+                                </div>
+                                
                                 <div className="floating-elements">
                                     <div className="floating-icon">
                                         <img src={react} alt="React" />
@@ -72,7 +91,6 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <SportLight />
                         </div>
                     </animated.div>
                 );
