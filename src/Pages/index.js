@@ -1,60 +1,104 @@
 import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring"; // Importing react-spring for animation
+import { useSpring, animated } from "react-spring";
 import './style.scss';
 import Profile from "./Profile/profile";
-import { Me, homeIcon, profile, ufo, sportlight, bulb } from '../Assets';
+import Projects from "./Projects/projects";
+import Contact from "./Contact/contact";
+import { Me, homeIcon, profile, react, js, python } from '../Assets';
 import { SportLight } from '../components';
 
 const Home = () => {
     const [isMouseIn, setIsMouseIn] = useState(false);
-    const [isMouseDown, setIsMouseDown] = useState(false);
-    const [SelectedPage, setSelectedPage] = useState('Profile');
+    const [SelectedPage, setSelectedPage] = useState('Home');
 
-    // Animation for page content fade-in
-    const pageFade = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 300 });
-
-    useEffect(() => {
-    }, []);
+    const pageFade = useSpring({ 
+        opacity: 1, 
+        transform: 'translateY(0px)',
+        from: { opacity: 0, transform: 'translateY(20px)' }, 
+        delay: 300 
+    });
 
     const togglebarEnter = () => setIsMouseIn(true);
     const togglebarLeave = () => setIsMouseIn(false);
-    const handleOnMouseDown = () => setIsMouseDown(true);
-    const handleOnMouseUp = () => setIsMouseDown(false);
+
+    const renderPage = () => {
+        switch(SelectedPage) {
+            case 'Profile':
+                return <Profile />;
+            case 'Projects':
+                return <Projects />;
+            case 'Contact':
+                return <Contact />;
+            default:
+                return (
+                    <animated.div className="body" style={pageFade}>
+                        <div className="bodyleft">
+                            <p className="fullstack">Full-Stack Developer</p>
+                            <p className="myname">Agreement<br />Hlungwane</p>
+                            <p className="description">
+                                Hello and welcome to my portfolio! I'm a Full-Stack Developer with a passion for building 
+                                high-performance web and mobile applications, as well as data-driven systems with seamless, 
+                                user-friendly interfaces. I excel at tackling complex challenges and am always driven to 
+                                learn the latest technologies to deliver efficient, scalable, and impactful solutions.
+                            </p>
+                            <div className="cta-buttons">
+                                <button 
+                                    className="cta-button primary"
+                                    onClick={() => setSelectedPage('Projects')}
+                                >
+                                    View My Work
+                                </button>
+                                <button 
+                                    className="cta-button secondary"
+                                    onClick={() => setSelectedPage('Contact')}
+                                >
+                                    Get In Touch
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="bodyright">
+                            <div className="profile-container">
+                                <img src={Me} alt="Agreement Hlungwane" className="profile-img" />
+                                <div className="floating-elements">
+                                    <div className="floating-icon">
+                                        <img src={react} alt="React" />
+                                    </div>
+                                    <div className="floating-icon">
+                                        <img src={js} alt="JavaScript" />
+                                    </div>
+                                    <div className="floating-icon">
+                                        <img src={python} alt="Python" />
+                                    </div>
+                                </div>
+                            </div>
+                            <SportLight />
+                        </div>
+                    </animated.div>
+                );
+        }
+    };
 
     return (
         <div className="home">
             <div className="topbar" onMouseEnter={togglebarEnter} onMouseLeave={togglebarLeave}>
                 <div className="icontray">
                     {["Home", "Profile", "Projects", "Contact"].map((item, index) => (
-                        <div onClick={e => { setSelectedPage(e.currentTarget.id); }} key={index} id={item} className={isMouseIn ? 'homepairActive' : 'homepair'} style={{ backgroundColor: SelectedPage === item ? '#f4dfc840' : '', boxShadow: SelectedPage === item ? ' inset -11px 8px 15px -4px #F4DFC8' : '' }} onMouseDown={handleOnMouseDown} onMouseUp={handleOnMouseUp}>
+                        <div 
+                            onClick={() => setSelectedPage(item)} 
+                            key={index} 
+                            className={isMouseIn || SelectedPage === item ? 'homepairActive' : 'homepair'}
+                        >
                             <img alt={item.toLowerCase()} src={index % 2 === 0 ? homeIcon : profile} />
-                            {isMouseIn ? <p className="iconname">{item}</p> : null}
+                            <span className="iconname">{item}</span>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {SelectedPage === 'Home' ? 
-                <div className="body" style={pageFade}>
-                    <div className="bodyleft">
-                        <p className="fullstack">Full-Stack Developer</p>
-                        <p className="myname">Agreement<br style={{ margin: '0' }} />Hlungwane</p>
-                        <p className="fullstack" style={{ fontSize: 'larger', textAlign: 'left', width: '80%', marginTop: '7%', lineHeight: '1.3' }}>
-                            Hello and welcome to my portfolio! I'm a Full-Stack Developer with a passion for building high-performance web and
-                            mobile applications, as well as data-driven systems with seamless, user-friendly interfaces. I excel at tackling
-                            complex challenges and am always driven to learn the latest technologies to deliver efficient, scalable, and impactful
-                            solutions.
-                        </p>
-                    </div>
-
-                    <div className="bodyright">
-                        <img src={Me} alt="My Profile" className="profile-img" />
-                        <SportLight />
-                    </div>
-
-                </div> 
-                : SelectedPage === 'Profile' ? <Profile /> : null}
+            {renderPage()}
         </div>
     );
 };
+
 export default Home;
