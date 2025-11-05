@@ -85,7 +85,7 @@ const Profile = () => {
 
                         <div className="complogo" >
                             <img src={AionsLogo} alt="Aions Creative Technology Logo" style={{ height: '30%', cursor: 'pointer' }} />
-                            <a href='https://www.aions.co.za' target='_blank' rel="noopener noreferrer" style={{ height: '100%', width: '100%', position: 'absolute' }} />
+                            <a href='https://www.aions.co.za' target='_blank' rel="noopener noreferrer" style={{ height: '100%', width: '100%', position: 'absolute' }} aria-label="Visit Aions Creative Technology website" />
                         </div>
                     </div>
                     <div className="experience">
@@ -103,7 +103,7 @@ const Profile = () => {
                         <div className="complogo" style={{ width: '40%' }}  >
                             <img src={yesYouth} alt="Yes4Youth Logo" style={{ height: '35%', cursor: 'pointer' }} />
                             <img src={AionsLogo} alt="Aions Creative Technology Logo" style={{ height: '20%', cursor: 'pointer' }} />
-                            <a style={{ height: '100%', width: '100%', position: 'absolute' }} target="_blank" rel="noopener noreferrer" href="https://www.yes4youth.co.za/" />
+                            <a style={{ height: '100%', width: '100%', position: 'absolute' }} target="_blank" rel="noopener noreferrer" href="https://www.yes4youth.co.za/" aria-label="Visit Yes4Youth website" />
                         </div>
                     </div>
 

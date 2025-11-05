@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import './style.scss';
 import Profile from "./Profile/profile";
 import Projects from "./Projects/projects";
 import Contact from "./Contact/contact";
 import { Me, homeIcon, profile, react, js, python } from '../Assets';
-import { SportLight } from '../components';
 
 const Home = () => {
     const [isMouseIn, setIsMouseIn] = useState(false);
